@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keylogger Tool | V. Mohan Aaditya</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Custom Cursor -->
+<div class="cursor-dot"></div>
+<div class="cursor-outline"></div>
+
+<!-- Project Banner Image -->
+<section class="project-banner">
+  <img src="images/keyy.jpg" alt="Keylogger Banner" class="banner-image">
+  <div class="banner-overlay">
+    <h1>Keylogger Tool</h1>
+    <h3>Cross-Platform Logging | Windows & Linux</h3>
+  </div>
+</section>
+
+<!-- Main Project Section -->
+<section class="container project-detail" style="margin-top:40px;">
+  <div class="project-content">
+    <h2 class="section-title">Project Overview</h2>
+    <p style="color:var(--text-muted); line-height:1.7;">
+      Developed a cross-platform keylogger tool capable of capturing keystrokes with high accuracy on both Windows (via PowerShell) and Linux systems. Designed for security testing and ethical hacking purposes, it logs user input securely, storing information about typed content and the applications used. The tool is stealthy and hard to detect during testing scenarios.
+    </p>
+
+    <h2 class="section-title">Key Highlights</h2>
+    <ul style="color:var(--text-secondary); line-height:1.7; margin-left:20px;">
+      <li>Accurately logs keystrokes and captures context about the active application.</li>
+      <li>Works on Windows and Linux systems, ensuring cross-platform compatibility.</li>
+      <li>Stealth mode makes it hard to detect during ethical hacking exercises.</li>
+      <li>Stores logs securely in a structured format for later analysis.</li>
+      <li>Tested extensively for reliability and performance in different OS environments.</li>
+    </ul>
+
+    <h2 class="section-title">Skills Learned</h2>
+    <div class="skills-grid" style="display:flex; flex-wrap:wrap; gap:15px; margin-top:20px;">
+      <span class="skill-chip" data-hover>Keylogging</span>
+      <span class="skill-chip" data-hover>Cross-Platform Development</span>
+      <span class="skill-chip" data-hover>Windows PowerShell</span>
+      <span class="skill-chip" data-hover>Linux Scripting</span>
+      <span class="skill-chip" data-hover>Stealth Techniques</span>
+      <span class="skill-chip" data-hover>Data Logging & Storage</span>
+      <span class="skill-chip" data-hover>Input Monitoring</span>
+      <span class="skill-chip" data-hover>Process Tracking</span>
+      <span class="skill-chip" data-hover>Ethical Hacking</span>
+      <span class="skill-chip" data-hover>Security Testing</span>
+      <span class="skill-chip" data-hover>Threat Simulation</span>
+      <span class="skill-chip" data-hover>Python Scripting</span>
+      <span class="skill-chip" data-hover>Network Awareness</span>
+      <span class="skill-chip" data-hover>Steganography Awareness</span>
+      <span class="skill-chip" data-hover>Incident Documentation</span>
+    </div>
+
+    <!-- Back Button -->
+    <a class="btn btn-primary" href="index.html#projects" style="margin-top:40px; display:inline-block;">
+      ← Back to Projects
+    </a>
+  </div>
+</section>
+
+<!-- Cursor Script -->
+<script>
+const dot = document.querySelector('.cursor-dot');
+const outline = document.querySelector('.cursor-outline');
+let mouseX = 0, mouseY = 0, outlineX = 0, outlineY = 0;
+
+document.addEventListener('mousemove', e => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+  dot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+});
+
+function animate() {
+  outlineX += (mouseX - outlineX) * 0.15;
+  outlineY += (mouseY - outlineY) * 0.15;
+  outline.style.transform = `translate(${outlineX}px, ${outlineY}px)`;
+  requestAnimationFrame(animate);
+}
+animate();
+
+document.querySelectorAll('a, button, .skill-chip').forEach(el => {
+  el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+  el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NetSentinel Firewall | V. Mohan Aaditya</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Custom Cursor -->
+<div class="cursor-dot"></div>
+<div class="cursor-outline"></div>
+
+<!-- Project Banner Image -->
+<section class="project-banner">
+  <img src="images/fire.jpg" alt="NetSentinel Firewall Banner" class="banner-image">
+  <div class="banner-overlay">
+    <h1>NetSentinel Firewall</h1>
+    <h3>Geo-Fenced Firewall | Kali Linux CLI & UI</h3>
+  </div>
+</section>
+
+<!-- Main Project Section -->
+<section class="container project-detail" style="margin-top:40px;">
+  <div class="project-content">
+    <h2 class="section-title">Project Overview</h2>
+    <p style="color:var(--text-muted); line-height:1.7;">
+      Developed a next-generation geo-fenced firewall in Kali Linux with a CLI-based user interface. 
+      Users can block or unblock IPs directly, and all logs are automatically saved in a dedicated folder. 
+      The system supports real-time logging and automated threat mitigation from specific regions, 
+      providing enterprise-grade network security.
+    </p>
+
+    <h2 class="section-title">Key Highlights</h2>
+    <ul style="color:var(--text-secondary); line-height:1.7; margin-left:20px;">
+      <li>Implemented IP-based geo-blocking rules to prevent unauthorized access.</li>
+      <li>Enabled block/unblock functionality through a user-friendly CLI interface.</li>
+      <li>Maintains detailed logs for all blocked/allowed IPs in a dedicated folder.</li>
+      <li>Simulated real-world attacks to test firewall effectiveness and resilience.</li>
+      <li>Achieved high security coverage with automated alerting and threat response.</li>
+    </ul>
+
+    <h2 class="section-title">Skills Learned</h2>
+    <div class="skills-grid" style="display:flex; flex-wrap:wrap; gap:15px; margin-top:20px;">
+      <span class="skill-chip" data-hover>Network Security</span>
+      <span class="skill-chip" data-hover>Firewall Configuration</span>
+      <span class="skill-chip" data-hover>IP Geolocation & Geo-Fencing</span>
+      <span class="skill-chip" data-hover>CLI Development</span>
+      <span class="skill-chip" data-hover>Real-Time Logging</span>
+      <span class="skill-chip" data-hover>Kali Linux Tools</span>
+      <span class="skill-chip" data-hover>Threat Simulation</span>
+      <span class="skill-chip" data-hover>Security Automation</span>
+      <span class="skill-chip" data-hover>Python Scripting</span>
+      <span class="skill-chip" data-hover>Incident Response</span>
+      <span class="skill-chip" data-hover>Network Monitoring</span>
+      <span class="skill-chip" data-hover>Access Control</span>
+      <span class="skill-chip" data-hover>Vulnerability Assessment</span>
+      <span class="skill-chip" data-hover>Reporting & Documentation</span>
+      <span class="skill-chip" data-hover>Client Engagement</span>
+    </div>
+
+    <!-- Back Button -->
+    <a class="btn btn-primary" href="index.html#projects" style="margin-top:40px; display:inline-block;">
+      ← Back to Projects
+    </a>
+  </div>
+</section>
+
+<!-- Cursor Script -->
+<script>
+const dot = document.querySelector('.cursor-dot');
+const outline = document.querySelector('.cursor-outline');
+let mouseX = 0, mouseY = 0, outlineX = 0, outlineY = 0;
+
+document.addEventListener('mousemove', e => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+  dot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+});
+
+function animate() {
+  outlineX += (mouseX - outlineX) * 0.15;
+  outlineY += (mouseY - outlineY) * 0.15;
+  outline.style.transform = `translate(${outlineX}px, ${outlineY}px)`;
+  requestAnimationFrame(animate);
+}
+animate();
+
+document.querySelectorAll('a, button, .skill-chip').forEach(el => {
+  el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+  el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+});
+</script>
+
+</body>
+</html>

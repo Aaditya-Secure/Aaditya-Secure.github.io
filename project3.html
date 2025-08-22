@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Lab SIEM | V. Mohan Aaditya</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Custom Cursor -->
+<div class="cursor-dot"></div>
+<div class="cursor-outline"></div>
+
+<!-- Project Banner Image -->
+<section class="project-banner">
+  <img src="images/siem.jpg" alt="SIEM Lab Banner" class="banner-image">
+  <div class="banner-overlay">
+    <h1>Home Lab SIEM</h1>
+    <h3>Wazuh Monitoring Lab | Windows Agent & Ubuntu Manager</h3>
+  </div>
+</section>
+
+<!-- Main Project Section -->
+<section class="container project-detail" style="margin-top:40px;">
+  <div class="project-content">
+    <h2 class="section-title">Project Overview</h2>
+    <p style="color:var(--text-muted); line-height:1.7;">
+      Developed a personal SIEM lab using Wazuh to monitor Windows 10 agents from an Ubuntu server with GUI. Configured Wazuh agents and manager, and simulated attacks including privilege escalation, file integrity modifications, and MITRE techniques to analyze real-time detection. This lab provided hands-on experience in endpoint monitoring, log analysis, and threat detection.
+    </p>
+
+    <h2 class="section-title">Key Highlights</h2>
+    <ul style="color:var(--text-secondary); line-height:1.7; margin-left:20px;">
+      <li>Installed Wazuh agent on Windows 10 and manager on Ubuntu with GUI.</li>
+      <li>Monitored real-time security events including FIM, CTH, and threat alerts.</li>
+      <li>Simulated privilege escalation, malware, and MITRE-based attacks for detection testing.</li>
+      <li>Analyzed logs and alerts in Wazuh dashboard for incident response training.</li>
+      <li>Configured rules and notifications to respond to suspicious activities automatically.</li>
+    </ul>
+
+    <h2 class="section-title">Skills Learned</h2>
+    <div class="skills-grid" style="display:flex; flex-wrap:wrap; gap:15px; margin-top:20px;">
+      <span class="skill-chip" data-hover>SIEM Deployment</span>
+      <span class="skill-chip" data-hover>Wazuh Agent & Manager</span>
+      <span class="skill-chip" data-hover>Windows & Ubuntu Administration</span>
+      <span class="skill-chip" data-hover>Threat Detection</span>
+      <span class="skill-chip" data-hover>Privilege Escalation Testing</span>
+      <span class="skill-chip" data-hover>File Integrity Monitoring (FIM)</span>
+      <span class="skill-chip" data-hover>CTH Monitoring</span>
+      <span class="skill-chip" data-hover>MITRE ATT&CK Techniques</span>
+      <span class="skill-chip" data-hover>Log Analysis</span>
+      <span class="skill-chip" data-hover>Alert Configuration</span>
+      <span class="skill-chip" data-hover>Incident Response</span>
+      <span class="skill-chip" data-hover>Security Automation</span>
+      <span class="skill-chip" data-hover>Endpoint Security</span>
+      <span class="skill-chip" data-hover>Network Monitoring</span>
+      <span class="skill-chip" data-hover>Cybersecurity Lab Setup</span>
+    </div>
+
+    <!-- Back Button -->
+    <a class="btn btn-primary" href="index.html#projects" style="margin-top:40px; display:inline-block;">
+      ← Back to Projects
+    </a>
+  </div>
+</section>
+
+<!-- Cursor Script -->
+<script>
+const dot = document.querySelector('.cursor-dot');
+const outline = document.querySelector('.cursor-outline');
+let mouseX = 0, mouseY = 0, outlineX = 0, outlineY = 0;
+
+document.addEventListener('mousemove', e => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+  dot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+});
+
+function animate() {
+  outlineX += (mouseX - outlineX) * 0.15;
+  outlineY += (mouseY - outlineY) * 0.15;
+  outline.style.transform = `translate(${outlineX}px, ${outlineY}px)`;
+  requestAnimationFrame(animate);
+}
+animate();
+
+document.querySelectorAll('a, button, .skill-chip').forEach(el => {
+  el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+  el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bug Bounty and CTF Enthusiast| V. Mohan Aaditya</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<!-- Background Right Image -->
+<img src="images/bg2.png" alt="Background Decorative" class="bg-right"/>
+<!-- Custom Cursor -->
+<div class="cursor-dot"></div>
+<div class="cursor-outline"></div>
+
+<!-- Main Experience Section -->
+<section class="container experience-detail" style="margin-top: 120px;">
+  <div class="experience-header" style="display:flex; align-items:center; gap:20px; flex-wrap:wrap;">
+    <!-- Experience Images -->
+    <div class="experience-icon">
+  <img src="images/htb.jpg" alt="HackTheBox" class="experience-img"/>
+  <img src="images/h1.jpg" alt="Bug Bounty" class="experience-img"/>
+</div>
+
+    <!-- Title and Duration -->
+    <div class="experience-title">
+      <h1 style="font-size:2.5rem; color:var(--text-primary);">CTF Enthusiast & Bug Bounty Hunter</h1>
+      <h3 style="color:var(--text-secondary); margin-top:5px;">2023 - Present</h3>
+    </div>
+  </div>
+
+  <!-- Role Overview -->
+  <div class="experience-content" style="margin-top:40px;">
+    <h2 class="section-title">Role Overview</h2>
+    <p style="color:var(--text-muted); line-height:1.7;">
+      Immersed in competitive Capture-the-Flag (CTF) challenges and bug bounty programs to strengthen advanced cybersecurity expertise. Specialized in ethical hacking, vulnerability analysis, exploitation development, and responsible disclosure. Explored real-world applications, client systems, and network architectures to identify potential threats and attack vectors. Developed systematic approaches for reconnaissance, exploitation, and post-exploitation analysis, combining theoretical knowledge with practical hands-on experience.
+    </p>
+
+    <h2 class="section-title">Key Achievements</h2>
+    <ul style="color:var(--text-secondary); line-height:1.7; margin-left:20px;">
+      <li>Participated in 15+ high-profile CTF competitions, consistently ranking in top tiers and achieving podium finishes.</li>
+      <li>Discovered multiple high-impact vulnerabilities on platforms such as Bugcrowd, HackOne, and HackTheBox.</li>
+      <li>Authored detailed technical write-ups for exploits, contributing to community knowledge sharing.</li>
+      <li>Developed advanced exploitation techniques for web applications, network protocols, and server misconfigurations.</li>
+      <li>Led mini research projects on new attack surfaces and threat patterns, enhancing threat intelligence understanding.</li>
+      <li>Collaborated with platform security teams to responsibly disclose vulnerabilities and verify remediation.</li>
+      <li>Conducted hands-on simulations of real-world attack scenarios, improving incident response capabilities.</li>
+      <li>Built a structured workflow for penetration testing that reduced reporting time while increasing technical depth.</li>
+    </ul>
+
+    <h2 class="section-title">Professional Growth</h2>
+    <p style="color:var(--text-muted); line-height:1.7;">
+      Gained expertise in both offensive and defensive cybersecurity practices through continuous CTF participation and bug bounty research. Strengthened technical reporting, communication, and collaboration skills by documenting vulnerabilities and engaging with platform security teams. Expanded understanding of web, mobile, and network security, while developing automation scripts for faster reconnaissance and exploitation.
+    </p>
+
+    <!-- Skills Learned Section -->
+    <section class="skills-learned" style="margin-top:40px;">
+      <h2 class="section-title">Skills Learned</h2>
+      <div class="skills-grid" style="display:flex; flex-wrap:wrap; gap:15px; margin-top:20px;">
+        <span class="skill-chip" data-hover>Web Application Exploitation</span>
+        <span class="skill-chip" data-hover>Network Reconnaissance</span>
+        <span class="skill-chip" data-hover>Exploit Development</span>
+        <span class="skill-chip" data-hover>Vulnerability Research</span>
+        <span class="skill-chip" data-hover>Ethical Hacking</span>
+        <span class="skill-chip" data-hover>Reverse Engineering</span>
+        <span class="skill-chip" data-hover>Cryptography Analysis</span>
+        <span class="skill-chip" data-hover>SQL Injection & XSS</span>
+        <span class="skill-chip" data-hover>Privilege Escalation</span>
+        <span class="skill-chip" data-hover>Social Engineering Awareness</span>
+        <span class="skill-chip" data-hover>Threat Intelligence Analysis</span>
+        <span class="skill-chip" data-hover>Bug Bounty Reporting</span>
+        <span class="skill-chip" data-hover>Security Automation</span>
+        <span class="skill-chip" data-hover>Wi-Fi & Network Security Testing</span>
+        <span class="skill-chip" data-hover>Post-Exploitation Techniques</span>
+        <span class="skill-chip" data-hover>System Hardening</span>
+        <span class="skill-chip" data-hover>Log Analysis & Incident Response</span>
+        <span class="skill-chip" data-hover>Cloud Security Assessment</span>
+      </div>
+    </section>
+
+    <!-- Back Button -->
+    <a class="btn btn-primary" href="index.html#experience" style="margin-top:40px; display:inline-block;">← Back to Experience</a>
+  </div>
+</section>
+
+<!-- Cursor Script -->
+<script>
+const dot = document.querySelector('.cursor-dot');
+const outline = document.querySelector('.cursor-outline');
+let mouseX = 0, mouseY = 0, outlineX = 0, outlineY = 0;
+
+document.addEventListener('mousemove', e => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+  dot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+});
+
+function animate() {
+  outlineX += (mouseX - outlineX) * 0.15;
+  outlineY += (mouseY - outlineY) * 0.15;
+  outline.style.transform = `translate(${outlineX}px, ${outlineY}px)`;
+  requestAnimationFrame(animate);
+}
+animate();
+
+// Hover effect
+document.querySelectorAll('a, button, .skill-chip').forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    document.body.classList.add('cursor-hover');
+  });
+  el.addEventListener('mouseleave', () => {
+    document.body.classList.remove('cursor-hover');
+  });
+});
+</script>
+
+</body>
+</html>
