@@ -1,104 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Security Analyst Intern | V. Mohan Aaditya</title>
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security Analyst Intern | V. Mohan Aaditya</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
-<!-- Background Right Image -->
-<img src="images/bg.png" alt="Background Decorative" class="bg-right"/>
-<!-- Custom Cursor -->
-<div class="cursor-dot"></div>
-<div class="cursor-outline"></div>
+  <!-- Background Right Image -->
+  <img src="images/bg.png" alt="Background Decorative" class="bg-right" />
+  <!-- Custom Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
 
-<!-- Main Experience Section -->
-<section class="container experience-detail" style="margin-top: 120px;">
-  <div class="experience-header" style="display:flex; align-items:center; gap:20px; flex-wrap:wrap;">
-    <!-- Experience Icon -->
-    <div class="experience-icon">
-      <img src="images/exp1.jpg" alt="Experience 1 Icon" class="experience-img"/>
+  <!-- Main Experience Section -->
+  <section class="container experience-detail" style="margin-top: 120px;">
+    <div class="experience-header" style="display:flex; align-items:center; gap:20px; flex-wrap:wrap;">
+      <!-- Experience Icon -->
+      <div class="experience-icon">
+        <img src="images/exp1.jpg" alt="Experience 1 Icon" class="experience-img" />
+      </div>
+
+      <!-- Title and Company -->
+      <div class="experience-title">
+        <h1 style="font-size:2.5rem; color:var(--text-primary);">Security Analyst Intern</h1>
+        <h3 style="color:var(--text-secondary); margin-top:5px;">Securis360 | Sept 2024 - April 2025</h3>
+      </div>
     </div>
 
-    <!-- Title and Company -->
-    <div class="experience-title">
-      <h1 style="font-size:2.5rem; color:var(--text-primary);">Security Analyst Intern</h1>
-      <h3 style="color:var(--text-secondary); margin-top:5px;">Securis360 | Sept 2024 - April 2025</h3>
+    <!-- Role Overview -->
+    <div class="experience-content" style="margin-top:40px;">
+      <h2 class="section-title">Role Overview</h2>
+      <p style="color:var(--text-muted); line-height:1.7;">
+        Conducted advanced Vulnerability Assessment and Penetration Testing (VAPT) across multiple client environments,
+        including web applications, networks, and cloud systems. Directly engaged with clients to identify risks,
+        simulate realistic attack scenarios, and provide actionable mitigation strategies.
+      </p>
+
+      <h2 class="section-title">Key Contributions</h2>
+      <ul style="color:var(--text-secondary); line-height:1.7; margin-left:20px;">
+        <li>Executed 20+ full-scale VAPT projects, uncovering critical vulnerabilities and implementing mitigation
+          measures.</li>
+        <li>Produced 350+ detailed technical reports with step-by-step remediation guidance, enhancing client
+          cybersecurity posture.</li>
+        <li>Performed hands-on exploitation and security hardening for client systems, reducing potential attack
+          surface.</li>
+        <li>Collaborated with cross-functional teams to design and implement effective risk mitigation strategies.</li>
+        <li>Participated in client workshops, educating staff on security best practices and awareness programs.</li>
+      </ul>
+
+      <h2 class="section-title">Skills & Expertise Gained</h2>
+      <div class="skills-grid" style="display:flex; flex-wrap:wrap; gap:15px; margin-top:20px;">
+        <span class="skill-chip" data-hover>Vulnerability Assessment</span>
+        <span class="skill-chip" data-hover>Penetration Testing</span>
+        <span class="skill-chip" data-hover>Exploit Development</span>
+        <span class="skill-chip" data-hover>Network Security</span>
+        <span class="skill-chip" data-hover>Web Application Security</span>
+        <span class="skill-chip" data-hover>Cloud Security</span>
+        <span class="skill-chip" data-hover>Security Auditing</span>
+        <span class="skill-chip" data-hover>Risk Mitigation</span>
+        <span class="skill-chip" data-hover>Threat Modeling</span>
+        <span class="skill-chip" data-hover>Technical Reporting</span>
+        <span class="skill-chip" data-hover>Client Engagement</span>
+        <span class="skill-chip" data-hover>Incident Analysis</span>
+        <span class="skill-chip" data-hover>Compliance Assessment</span>
+        <span class="skill-chip" data-hover>Cybersecurity Awareness</span>
+      </div>
+
+      <!-- Back Button -->
+      <a class="btn btn-primary" href="index.html#experience" style="margin-top:40px; display:inline-block;">← Back to
+        Experience</a>
     </div>
-  </div>
+  </section>
 
-  <!-- Role Overview -->
-  <div class="experience-content" style="margin-top:40px;">
-    <h2 class="section-title">Role Overview</h2>
-    <p style="color:var(--text-muted); line-height:1.7;">
-      Conducted advanced Vulnerability Assessment and Penetration Testing (VAPT) across multiple client environments, including web applications, networks, and cloud systems. Directly engaged with clients to identify risks, simulate realistic attack scenarios, and provide actionable mitigation strategies.
-    </p>
+  <!-- Cursor Script -->
+  <script>
+    const dot = document.querySelector('.cursor-dot');
+    const outline = document.querySelector('.cursor-outline');
+    let mouseX = 0,
+      mouseY = 0,
+      outlineX = 0,
+      outlineY = 0;
 
-    <h2 class="section-title">Key Contributions</h2>
-    <ul style="color:var(--text-secondary); line-height:1.7; margin-left:20px;">
-      <li>Executed 20+ full-scale VAPT projects, uncovering critical vulnerabilities and implementing mitigation measures.</li>
-      <li>Produced 350+ detailed technical reports with step-by-step remediation guidance, enhancing client cybersecurity posture.</li>
-      <li>Performed hands-on exploitation and security hardening for client systems, reducing potential attack surface.</li>
-      <li>Collaborated with cross-functional teams to design and implement effective risk mitigation strategies.</li>
-      <li>Participated in client workshops, educating staff on security best practices and awareness programs.</li>
-    </ul>
+    document.addEventListener('mousemove', e => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      dot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+    });
 
-    <h2 class="section-title">Skills & Expertise Gained</h2>
-    <div class="skills-grid" style="display:flex; flex-wrap:wrap; gap:15px; margin-top:20px;">
-      <span class="skill-chip" data-hover>Vulnerability Assessment</span>
-      <span class="skill-chip" data-hover>Penetration Testing</span>
-      <span class="skill-chip" data-hover>Exploit Development</span>
-      <span class="skill-chip" data-hover>Network Security</span>
-      <span class="skill-chip" data-hover>Web Application Security</span>
-      <span class="skill-chip" data-hover>Cloud Security</span>
-      <span class="skill-chip" data-hover>Security Auditing</span>
-      <span class="skill-chip" data-hover>Risk Mitigation</span>
-      <span class="skill-chip" data-hover>Threat Modeling</span>
-      <span class="skill-chip" data-hover>Technical Reporting</span>
-      <span class="skill-chip" data-hover>Client Engagement</span>
-      <span class="skill-chip" data-hover>Incident Analysis</span>
-      <span class="skill-chip" data-hover>Compliance Assessment</span>
-      <span class="skill-chip" data-hover>Firewall & IDS Testing</span>
-      <span class="skill-chip" data-hover>Cybersecurity Awareness</span>
-    </div>
+    function animate() {
+      outlineX += (mouseX - outlineX) * 0.15;
+      outlineY += (mouseY - outlineY) * 0.15;
+      outline.style.transform = `translate(${outlineX}px, ${outlineY}px)`;
+      requestAnimationFrame(animate);
+    }
+    animate();
 
-    <!-- Back Button -->
-    <a class="btn btn-primary" href="index.html#experience" style="margin-top:40px; display:inline-block;">← Back to Experience</a>
-  </div>
-</section>
-
-<!-- Cursor Script -->
-<script>
-const dot = document.querySelector('.cursor-dot');
-const outline = document.querySelector('.cursor-outline');
-let mouseX = 0, mouseY = 0, outlineX = 0, outlineY = 0;
-
-document.addEventListener('mousemove', e => {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-  dot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
-});
-
-function animate() {
-  outlineX += (mouseX - outlineX) * 0.15;
-  outlineY += (mouseY - outlineY) * 0.15;
-  outline.style.transform = `translate(${outlineX}px, ${outlineY}px)`;
-  requestAnimationFrame(animate);
-}
-animate();
-
-// Hover effect for buttons and skills
-document.querySelectorAll('a, button, .skill-chip').forEach(el => {
-  el.addEventListener('mouseenter', () => {
-    document.body.classList.add('cursor-hover');
-  });
-  el.addEventListener('mouseleave', () => {
-    document.body.classList.remove('cursor-hover');
-  });
-});
-</script>
+    // Hover effect for buttons and skills
+    document.querySelectorAll('a, button, .skill-chip').forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        document.body.classList.add('cursor-hover');
+      });
+      el.addEventListener('mouseleave', () => {
+        document.body.classList.remove('cursor-hover');
+      });
+    });
+  </script>
 
 </body>
+
 </html>
