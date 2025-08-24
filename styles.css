@@ -162,6 +162,50 @@ body {
     background-clip: text;
 }
 
+/* Default (desktop) */
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+/* Hide hamburger by default */
+.nav-toggle {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+}
+
+/* Mobile/Tablet view */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        /* hide links initially */
+        flex-direction: column;
+        gap: 20px;
+        position: absolute;
+        top: 60px;
+        /* below navbar */
+        right: 20px;
+        background: rgba(20, 20, 20, 0.95);
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        display: flex;
+        /* show when toggled */
+    }
+}
+
 .nav-links {
     display: flex;
     gap: 40px;

@@ -445,6 +445,7 @@ function initProjectLinks() {
     });
 }
 
+
 // Experience → open detail page, remember where to return
 function initExperienceLinks() {
     const experienceCards = document.querySelectorAll('[data-link^="experience"]');
@@ -478,7 +479,19 @@ window.addEventListener('load', () => {
 document.addEventListener('DOMContentLoaded', () => {
     initProjectLinks();
     initExperienceLinks();
+
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    if (navToggle && navLinks) {
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active'); // or .show, depending on your CSS
+            navToggle.classList.toggle('open'); // for animating hamburger to X
+        });
+    }
 });
+
 
 function scrollToSectionIfNeeded() {
     // 1) sessionStorage (set before navigating to detail pages)
