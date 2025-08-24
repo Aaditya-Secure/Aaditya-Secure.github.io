@@ -479,42 +479,76 @@
               </div>
 
               <!-- Contact Section -->
-<section id="contact" class="contact">
-  <div class="contact-form">
-    <form class="form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-      <!-- Web3Forms Access Key -->
-      <input type="hidden" name="access_key" value="46ec9323-e446-46f3-9803-7ebc686f4878">
+              <section id="contact" class="contact">
+                <div class="contact-form">
+                  <form class="form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                    <!-- Web3Forms Access Key -->
+                    <input type="hidden" name="access_key" value="46ec9323-e446-46f3-9803-7ebc686f4878">
 
-      <div class="form-group">
-        <input type="text" class="form-input" id="name" name="from_name" required>
-        <label for="name" class="form-label">Name</label>
-      </div>
+                    <div class="form-group">
+                      <input type="text" class="form-input" id="name" name="from_name" required>
+                      <label for="name" class="form-label">Name</label>
+                    </div>
 
-      <div class="form-group">
-        <input type="email" class="form-input" id="email" name="reply_to" required>
-        <label for="email" class="form-label">Email</label>
-      </div>
+                    <div class="form-group">
+                      <input type="email" class="form-input" id="email" name="reply_to" required>
+                      <label for="email" class="form-label">Email</label>
+                    </div>
 
-      <div class="form-group">
-        <input type="text" class="form-input" id="subject" name="subject" required>
-        <label for="subject" class="form-label">Subject</label>
-      </div>
+                    <div class="form-group">
+                      <input type="text" class="form-input" id="subject" name="subject" required>
+                      <label for="subject" class="form-label">Subject</label>
+                    </div>
 
-      <div class="form-group">
-        <textarea class="form-input" id="message" name="message" rows="5" required></textarea>
-        <label for="message" class="form-label">Message</label>
-      </div>
+                    <div class="form-group">
+                      <textarea class="form-input" id="message" name="message" rows="5" required></textarea>
+                      <label for="message" class="form-label">Message</label>
+                    </div>
 
-      <button type="submit" class="btn btn-primary btn-submit" data-magnetic>
-        <span>Send Message</span>
-        <div class="btn-particles"></div>
-      </button>
+                    <button type="submit" class="btn btn-primary btn-submit" data-magnetic>
+                      <span>Send Message</span>
+                      <div class="btn-particles"></div>
+                    </button>
 
-      <!-- Inline status message -->
-      <div id="form-message" style="margin-top:10px; font-weight:bold;"></div>
-    </form>
-  </div>
-</section>
+                    <!-- Inline status message -->
+                    <div id="form-message" style="margin-top:10px; font-weight:bold;"></div>
+                  </form>
+                </div>
+              </section>
+              <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                  // View My Work → scroll to #experience
+                  const viewWorkBtn = document.getElementById('viewWorkBtn');
+                  if (viewWorkBtn) {
+                    viewWorkBtn.addEventListener('click', function () {
+                      const expSection = document.getElementById('experience');
+                      if (expSection) {
+                        expSection.scrollIntoView({
+                          behavior: 'smooth'
+                        });
+                      } else {
+                        console.error("No section with id='experience' found.");
+                      }
+                    });
+                  }
+
+                  // Get In Touch → scroll to #contact
+                  const getInTouchBtn = document.getElementById('getInTouchBtn');
+                  if (getInTouchBtn) {
+                    getInTouchBtn.addEventListener('click', function () {
+                      const contactSection = document.getElementById('contact');
+                      if (contactSection) {
+                        contactSection.scrollIntoView({
+                          behavior: 'smooth'
+                        });
+                      } else {
+                        console.error("No section with id='contact' found.");
+                      }
+                    });
+                  }
+                });
+              </script>
+
 
 
               <script src="script.js"></script>

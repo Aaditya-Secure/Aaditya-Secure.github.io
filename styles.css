@@ -394,10 +394,10 @@ body {
 /* Flex layout for About Section */
 .about-content {
     display: flex;
-    align-items: flex-start;   
+    align-items: flex-start;
     justify-content: space-between;
     gap: 30px;
-    flex-wrap: wrap;          
+    flex-wrap: wrap;
     margin-top: 20px;
     padding-top: 0;
 }
@@ -406,7 +406,7 @@ body {
 .section-header {
     margin-bottom: 10px;
     padding-bottom: 0;
-    text-align: left;          
+    text-align: left;
 }
 
 /* About Image */
@@ -415,8 +415,8 @@ body {
     width: 350px;
     max-width: 100%;
     height: auto;
-    border-radius: 0;          
-    box-shadow: none;          
+    border-radius: 0;
+    box-shadow: none;
     margin: 0;
 }
 
@@ -442,12 +442,12 @@ body {
     }
 
     .about-image img {
-        margin: 0 auto 20px;   
-        width: 250px;         
+        margin: 0 auto 20px;
+        width: 250px;
     }
 
     .about-text {
-        text-align: justify;   
+        text-align: justify;
     }
 }
 
