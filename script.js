@@ -357,10 +357,11 @@ function initTiltElements() {
     });
 }
 
-// Form Animations
+// Form Animations + Web3Forms Submission
 function initFormAnimations() {
     const form = document.getElementById('contactForm');
     const inputs = document.querySelectorAll('.form-input');
+    const formMessage = document.getElementById('form-message');
 
     // Input focus animations
     inputs.forEach(input => {
@@ -377,26 +378,53 @@ function initFormAnimations() {
 
     // Form submission
     if (form) {
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
 
             const submitBtn = form.querySelector('.btn-submit');
-            const originalText = submitBtn.querySelector('span').textContent;
+            const btnText = submitBtn.querySelector('span');
+            const originalText = btnText.textContent;
 
             // Animate submission
-            submitBtn.querySelector('span').textContent = 'Sending...';
+            btnText.textContent = 'Sending...';
             submitBtn.style.background = 'linear-gradient(135deg, #00FFFF, #FF6B35)';
 
-            // Simulate form submission
-            setTimeout(() => {
-                submitBtn.querySelector('span').textContent = 'Message Sent!';
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch("https://api.web3forms.com/submit", {
+                    method: "POST",
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    btnText.textContent = 'Message Sent! ✅';
+                    formMessage.style.color = 'green';
+                    formMessage.innerText = 'Message sent successfully! ✅';
+
+                    setTimeout(() => {
+                        btnText.textContent = originalText;
+                        submitBtn.style.background = '';
+                        form.reset();
+                        formMessage.innerText = '';
+                    }, 2500);
+                } else {
+                    throw new Error(result.message || "Form submission failed");
+                }
+            } catch (error) {
+                console.error("Web3Forms error:", error);
+                btnText.textContent = 'Failed ❌';
+                formMessage.style.color = 'red';
+                formMessage.innerText = 'Failed to send message ❌. Try again.';
 
                 setTimeout(() => {
-                    submitBtn.querySelector('span').textContent = originalText;
+                    btnText.textContent = originalText;
                     submitBtn.style.background = '';
-                    form.reset();
-                }, 2000);
-            }, 1500);
+                    formMessage.innerText = '';
+                }, 3000);
+            }
         });
     }
 }
