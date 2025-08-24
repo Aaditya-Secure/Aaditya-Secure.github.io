@@ -44,11 +44,8 @@
     --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 
     --section-padding: 120px 0;
-    /* keep vertical spacing */
     --container-padding: 0 15px;
-    /* smaller left/right spacing */
     --container-max-width: 1200px;
-    /* or increase if you want wider content */
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
@@ -110,7 +107,6 @@ body {
     pointer-events: none;
     z-index: 9998;
     transition: all 0.05s ease;
-    /* reduced from 0.15s */
     opacity: 0.5;
 }
 
@@ -127,14 +123,12 @@ body {
 /* Navigation */
 .logo-img {
     height: 75px;
-    /* adjust as needed */
     width: auto;
     cursor: pointer;
 }
 
 .logo-img:hover {
     transform: translateY(-5px);
-    /* float upward */
 }
 
 .nav {
@@ -203,7 +197,6 @@ body {
 
 .nav-logo .logo-text {
     cursor: pointer;
-    /* Makes it look clickable */
 }
 
 /* Buttons */
@@ -375,7 +368,6 @@ body {
 .media-icons {
     display: flex;
     gap: 15px;
-    /* spacing between buttons */
     margin-top: 20px;
 }
 
@@ -386,73 +378,77 @@ body {
     width: 45px;
     height: 45px;
     border: 2px solid var(--primary);
-    /* orange outline */
     border-radius: 50%;
     color: var(--primary);
-    /* orange icon */
     font-size: 20px;
     background: transparent;
-    /* transparent fill */
     transition: all 0.3s ease-in-out;
 }
 
 .media-icons a:hover {
     transform: translateY(-5px);
-    /* hover up */
     box-shadow: 0 6px 12px rgba(255, 107, 53, 0.3);
-    /* glowing shadow */
 }
 
 
 /* Flex layout for About Section */
 .about-content {
     display: flex;
-    align-items: flex-start;
-    /* ensures top alignment */
+    align-items: flex-start;   
     justify-content: space-between;
     gap: 30px;
-    flex-wrap: wrap;
+    flex-wrap: wrap;          
+    margin-top: 20px;
     padding-top: 0;
-    margin-top: 0;
-    /* remove extra spacing from container */
 }
 
+/* Section Header */
 .section-header {
     margin-bottom: 10px;
-    /* small gap under header */
     padding-bottom: 0;
+    text-align: left;          
 }
 
+/* About Image */
 .about-image img {
     display: block;
-    margin-top: -10;
-    /* remove top margin */
     width: 350px;
-    /* slightly larger */
     max-width: 100%;
     height: auto;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
+    border-radius: 0;          
+    box-shadow: none;          
+    margin: 0;
 }
 
-
-/* Right text */
+/* About Text */
 .about-text {
     flex: 1;
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.6;
     margin: 0;
-    /* remove extra top/bottom margin */
     padding: 0;
-    /* remove extra padding */
 }
 
-
-/* Reduce space between section subtitle and text */
+/* Section Subtitle */
 .section-subtitle {
     margin-bottom: 10px;
-    /* was probably bigger */
+}
+
+/* Responsive: stack image & text on small screens */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img {
+        margin: 0 auto 20px;   
+        width: 250px;         
+    }
+
+    .about-text {
+        text-align: justify;   
+    }
 }
 
 /* Download button with glowing animation */
@@ -776,9 +772,7 @@ section {
     transform: translateY(-50%);
     width: 300px;
     opacity: 0.35;
-    /* Increased from 0.15 to 0.35 */
     filter: brightness(1.2);
-    /* Slightly brighter */
     z-index: 1;
     pointer-events: none;
 }
@@ -884,7 +878,6 @@ html {
     /* full viewport height */
     overflow: hidden;
     margin: 0;
-    /* remove any extra spacing */
     padding: 0;
 }
 
